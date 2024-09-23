@@ -1,51 +1,11 @@
-// import gsap from 'gsap';
-// import { useGSAP } from '@gsap/react';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
-// import profile from '../img/profile.png'
-
-// function About() {
-
-//     useGSAP(() => {
-//         gsap.from('#profile', {
-//             opacity: 0,
-//             marker: true,
-//             x: -500,
-//             duration: 2,
-//             delay: 3,
-//             ease: "back.inOut",
-//             scrollTrigger: {
-//                 trigger: '#profile',
-//                 scroller: "body",
-//                 markers: true
-//             }
-//         })
-//     },[])
-//     return (
-//         <div className='flex justify-center mt-96'>
-//             <div className='w-2/5 flex justify-center' id='profile'>
-//                 <img className="h-72 w-72 rounded-full"src={profile} alt="" />
-//             </div>
-
-//             <div className='w-3/5'>
-//                 <div className='text-2xl flex-col justify-center'>   
-//                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dicta enim provident vero sed veritatis nulla adipisci placeat voluptates commodi! Sequi sapiente id modi qui aspernatur nulla minima voluptatibus earum?
-//                 </div>
-//             </div>
-//         </div>
-//     )
-// }
-// export default About;
-
-
-
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import profile from '../img/profile.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
-function About() {
+const About = React.forwardRef((props, ref) => {
     useEffect(() => {
         const profile = gsap.from('#profile', {
             opacity: 0,
@@ -101,7 +61,7 @@ function About() {
     }, []);
 
     return (
-        <div className='flex justify-center mt-42 overflow-hidden'>
+        <div ref={ref} className='flex justify-center mt-42 overflow-hidden'>
             <div className='w-2/5 flex justify-center' id='profile'>
                 <img className="h-72 w-72 rounded-full hover:cursor-pointer hover:rounded-xl transform hover:scale-105 transition ease-in-out duration-700" src={profile} alt="" />
 
@@ -115,6 +75,6 @@ function About() {
             </div>
         </div>
     );
-}
+});
 
 export default About;

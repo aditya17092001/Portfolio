@@ -18,7 +18,7 @@ const Projects = React.forwardRef((props, ref) => {
             opacity: 0,
             scale: 0,
             duration: 1.7,
-            stagger: 0.1,
+            stagger: 0.2,
             ease: "back.inOut",
             scrollTrigger: {
                 trigger: "#projects",
@@ -50,7 +50,7 @@ const Projects = React.forwardRef((props, ref) => {
     
     return (
         <div ref={ref} className='mt-5 overflow-hidden'>
-            <div className='text-5xl font-bold text-pink-600 flex justify-center' id='projectHeading'>Projects</div>
+            <div className='text-5xl font-bold text-pink-600 flex justify-center smpc:text-3xl' id='projectHeading'>Projects</div>
 
             <div className='flex flex-wrap justify-between mx-10' id='projects'>
                 <div>

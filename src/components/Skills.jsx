@@ -63,16 +63,30 @@ const Skills = React.forwardRef((props, ref) => {
 
     
     useEffect(() => {
-        const skills = gsap.from('#skill, #skillsHeading', {
+        const skills = gsap.from('#skill', {
             opacity: 0,
             scale: 0,
-            duration: 1.7,
+            duration: 1,
             stagger: 0.1,
             ease: "back.inOut",
             scrollTrigger: {
                 trigger: "#skill",
-                start: "top 90%",
-                end: "top 100%",
+                start: "top 68%",
+                end: "top 85%",
+                // markers: true,
+                toggleActions: "play none none reverse",
+            }
+        })
+        const skillsheading = gsap.from('#skillsHeading', {
+            opacity: 0,
+            scale: 0,
+            duration: 1,
+            stagger: 0.1,
+            ease: "back.inOut",
+            scrollTrigger: {
+                trigger: "#skillsHeading",
+                start: "top 80%",
+                end: "top 85%",
                 // markers: true,
                 toggleActions: "play none none reverse",
             }
@@ -87,8 +101,8 @@ const Skills = React.forwardRef((props, ref) => {
     
     return (
 
-        <div ref={ref} className='overflow-hidden'>
-            <div className='flex justify-center text-5xl font-bold  text-pink-600 mt-10' id='skillsHeading'>Skills</div>
+        <div ref={ref} className='overflow-hidden mt-10'>
+            <div className='flex justify-center text-5xl font-bold  text-pink-600 mt-10 smpc:text-4xl' id='skillsHeading'>Skills</div>
             <div  className='overflow-hidden'>
                 <div className="flex flex-wrap justify-between">
                     {skills.map((obj, index) => (

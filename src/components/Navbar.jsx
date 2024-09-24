@@ -1,7 +1,7 @@
 import gsap  from "gsap";
 import { useGSAP } from '@gsap/react';
 
-function Navbar({ scrollToHome, scrollToAbout, scrollToEducation, scrollToProjects, scrollToSkills }) {
+function Navbar({ scrollToHome, scrollToAbout, scrollToEducation, scrollToProjects, scrollToSkills, scrollToContacts }) {
     const tl = gsap.timeline();
     useGSAP(() => {
         tl.from('#name', {
@@ -28,11 +28,12 @@ function Navbar({ scrollToHome, scrollToAbout, scrollToEducation, scrollToProjec
             <div className="flex justify-between mx-24 pt-5 h-16" id="nav">
                 <div className="text-3xl text-green-400 font-bold cursor-pointer" id='name'>UDATA ADITYA</div>
                 <div className="flex text-lg" id="list">
-                    <div className="px-5 cursor-pointer hover:text-green-400" onClick={scrollToHome}>Home</div>
-                    <div className="px-5 cursor-pointer hover:text-green-400" onClick={scrollToAbout}>About</div>
-                    <div className="px-5 cursor-pointer hover:text-green-400" onClick={scrollToSkills}>Skills</div>
-                    <div className="px-5 cursor-pointer hover:text-green-400" onClick={scrollToEducation}>Education</div>
-                    <div className="px-5 cursor-pointer hover:text-green-400" onClick={scrollToProjects}>Projects</div>
+                    <div className="px-5 cursor-pointer hover:text-green-400 smpc:px-3" onClick={scrollToHome}>Home</div>
+                    <div className="px-5 cursor-pointer hover:text-green-400 smpc:px-3" onClick={scrollToAbout}>About</div>
+                    <div className="px-5 cursor-pointer hover:text-green-400 smpc:px-3" onClick={scrollToSkills}>Skills</div>
+                    <div className="px-5 cursor-pointer hover:text-green-400 smpc:px-3" onClick={scrollToEducation}>Education</div>
+                    <div className="px-5 cursor-pointer hover:text-green-400 smpc:px-3" onClick={scrollToProjects}>Projects</div>
+                    <div className="px-5 cursor-pointer hover:text-green-400 smpc:px-3" onClick={scrollToContacts}>Contact</div>
                 </div>
             </div>
             <div className="border-2 border-gray-900 border-b-white pt-2" id="border">

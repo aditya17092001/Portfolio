@@ -47,9 +47,9 @@ const Contact = React.forwardRef((props, ref) => {
         <div ref={ref} className='overflow-hidden'>
             <div className='flex justify-center text-5xl mt-10 font-bold smpc:text-3xl' id='contactHeading'>Contact</div>
 
-            <div className='ml-52 mt-10 smpc:ml-0 smpcx:ml-20' id='contactData'>
-                <div className='text-3xl text-green-400 font-bold smpc:text-2xl'>Get In Touch</div>
-                <div className='text-xl text-gray-400 font-bold mt-2 smpc:text-base'>
+            <div className='mt-10 text-center' id='contactData'>
+                <div className='text-3xl text-green-400 font-bold'>Get In Touch</div>
+                <div className='text-xl text-gray-400 font-bold mt-2 '>
                     If you have any suggestion, project or even you want to say hello, please fill out the form below and I will reply you shortly.
                 </div>
             </div>

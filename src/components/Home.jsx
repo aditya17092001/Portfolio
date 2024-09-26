@@ -1,7 +1,7 @@
 import gsap  from "gsap";
 import { useGSAP } from '@gsap/react';
-import data from '../img/data.png';
-import gfg from '../img/gfg.svg'
+import data from '../img/data.svg';
+
 import React from "react";
 
 const Home = React.forwardRef((props, ref) => {

@@ -1,11 +1,11 @@
 import React from 'react'
 
-const ProjectCard = ({ img, title, description, techStack, liveLink, GitHubRepo }) => {
+const MProjectCard = ({ img, title, description, techStack, liveLink, GitHubRepo }) => {
     return (
-        <div className='m-5 w-96 h-[480px] border rounded-3xl bg-gray-800 shadow-lg shadow-white/50 hover:shadow-none '>
+        <div className='m-5 h-[480px] border rounded-3xl bg-gray-800 shadow-lg shadow-white/50 hover:shadow-none'>
             <img className="border-b rounded-3xl"src={img}alt="" />
             <div className=''>
-                <div className='text-2xl font-semibold flex justify-center text-green-400'>{title}</div>
+                <div className='text-xl font-semibold flex justify-center text-green-400'>{title}</div>
                 <div className='p-3'>{description}</div>
                 <div className='p-3'><span className='font-bold'>Tech Stack: </span> {techStack}</div>
                 <div className='flex justify-between'>
@@ -24,4 +24,4 @@ const ProjectCard = ({ img, title, description, techStack, liveLink, GitHubRepo 
     )
 }
 
-export default ProjectCard
+export default MProjectCard

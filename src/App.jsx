@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import About from './components/About'
 import Home from './components/Home'
@@ -10,10 +10,24 @@ import Contact from './components/Contact'
 import gsap from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import Footer from './components/Footer'
+import MNavbar from './components/Mobile/MNavbar'
+import MHome from './components/Mobile/MHome'
+import MAbout from './components/Mobile/MAbout'
+import MSkills from './components/Mobile/MSkills'
+import MEducation from './components/Mobile/MEducation'
+import MProject from './components/Mobile/MProject'
+import MContact from './components/Mobile/MContact'
+import MFooter from './components/Mobile/MFooter'
 
 gsap.registerPlugin(ScrollToPlugin);
 
 function App() {
+
+  const [windowDimensions, setWindowDimensions] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+  
 
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
@@ -37,14 +51,28 @@ function App() {
 
   return (
     <div className='min-h-screen bg-gray-900 text-white'>
-      <Navbar scrollToHome={scrollToHome} scrollToAbout={scrollToAbout} scrollToEducation={scrollToEducation} scrollToProjects={scrollToProjects} scrollToSkills={scrollToSkills} scrollToContacts={scrollToContacts}/>
-      <Home ref={homeRef}/>
-      <About ref={aboutRef}/>
-      <Skills ref={skillsRef}/>
-      <Education ref={educationRef}/>
-      <Projects ref={projectsRef}/>
-      <Contact ref={contactRef}/>
-      <Footer scrollToHome={scrollToHome}/>
+
+      {windowDimensions.width <= 500 || windowDimensions.height <= 600 ?
+      <div>
+        <MNavbar scrollToHome={scrollToHome} scrollToAbout={scrollToAbout} scrollToEducation={scrollToEducation} scrollToProjects={scrollToProjects} scrollToSkills={scrollToSkills} scrollToContacts={scrollToContacts}/>
+        <MHome ref={homeRef}/>
+        <MAbout ref={aboutRef}/>
+        <MSkills ref={skillsRef}/>
+        <MEducation ref={educationRef}/>
+        <MProject ref={projectsRef}/>
+        <MContact ref={contactRef}/>
+        <MFooter scrollToHome={scrollToHome}/>
+      </div> :
+      <div>
+        <Navbar scrollToHome={scrollToHome} scrollToAbout={scrollToAbout} scrollToEducation={scrollToEducation} scrollToProjects={scrollToProjects} scrollToSkills={scrollToSkills} scrollToContacts={scrollToContacts}/>
+        <Home ref={homeRef}/>
+        <About ref={aboutRef}/>
+        <Skills ref={skillsRef}/>
+        <Education ref={educationRef}/>
+        <Projects ref={projectsRef}/>
+        <Contact ref={contactRef}/>
+        <Footer scrollToHome={scrollToHome}/>
+      </div>}
     </div>
   )
 }

@@ -86,9 +86,9 @@ const About = React.forwardRef((props, ref) => {
                 </div>
 
             </div>
-            <div className='w-[50%]'>
+            <div className='w-[50%] mr-5'>
                 <div className='text-green-400 text-2xl mb-2' id='heading'>WHO I AM?</div>
-                <div className='text-xl flex-col justify-center mr-5 smpc:text-lg' id='bd'>
+                <div className='text-xl flex-col justify-center mr-5 smpc:text-lg text-justify' id='bd'>
                 My name is UDATA ADITYA.
                 I am a passionate and enthusiastic programmer dedicated to honing my skills in software development. As a quick learner with a self-driven attitude, I thrive on exploring new technologies and tackling complex problems. I have a strong interest in all aspects of web application development, and I am committed to making the web more accessible and innovative. My core expertise lies in JavaScript, Java which I leverage to create dynamic and efficient applications. I am actively seeking job opportunities that align with my skills and interests.
                 </div>

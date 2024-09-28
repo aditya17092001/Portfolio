@@ -62,7 +62,6 @@ const MHome = React.forwardRef((props, ref) => {
                     <div onClick={() => window.open('https://x.com/aditya_udata', '_blank')} className="h-9 w-9 mr-3 hover:cursor-pointer ">
                         <svg className="hover:h-10 hover:w-10 " xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 512 512" id="Twitter"><path fill="#ffffff" fill-rule="evenodd" d="M434.478 16H77.519C43.718 16 16 43.719 16 77.521v356.957C16 468.282 43.718 496 77.519 496h356.959C468.281 496 496 468.282 496 434.479V77.521C496 43.719 468.281 16 434.478 16zM383.41 191.673a208.1 208.1 0 0 1 .167 8.385c0 12.851-1.517 25.989-4.462 39.035-16.657 73.858-79.8 145.029-182.544 145.029-37.094 0-71.649-10.701-100.767-29.07a133.6 133.6 0 0 0 15.707.914c30.789 0 59.12-10.327 81.621-27.71-28.762-.505-53.016-19.215-61.391-44.915 4.022.754 8.132 1.183 12.354 1.183 6.032 0 11.808-.81 17.347-2.282-22.142-4.414-40.068-19.729-48.088-40.025-2.884-7.262-4.355-15.155-4.355-23.444v-.815c9 4.855 18.869 7.766 29.625 8.107-17.619-11.608-29.309-31.42-29.309-53.848 0-11.854 3.22-22.971 8.857-32.535 32.408 39.143 80.815 64.911 135.437 67.618a65.645 65.645 0 0 1-1.688-14.746c0-35.729 29.414-64.699 65.717-64.699 18.913 0 35.985 7.841 47.944 20.421a132.144 132.144 0 0 0 41.759-15.722c-4.93 15.13-15.322 27.809-28.904 35.811 13.306-1.563 25.957-5.031 37.739-10.166-8.784 12.964-19.947 24.361-32.766 33.474z" clip-rule="evenodd" class="color1a1a1a svgShape"></path></svg>
                     </div>
-
                 </div>
                 <div className="flex">
                     <div className="h-9 font-bold text-2xl text-pink-600 mt-5 hover:cursor-pointer " onClick={() => window.open('https://drive.google.com/file/d/1y9C-2O76TWdYvQitdCtnsd1UkKhNDlWA/view?usp=sharing', '_blank')}> Resume </div>
@@ -73,7 +72,7 @@ const MHome = React.forwardRef((props, ref) => {
             </div>
             <div className="flex flex-col mt-5 w-screen border bg-white" id="line"></div>
             <div className='items-center flex justify-center'>
-                <img className='h-full w-full ' id='img' src={data} alt="" srcset="" />
+                <img className='h-full w-full' id='img' src={data} alt="" srcset="" />
             </div>            
         </div>
     )

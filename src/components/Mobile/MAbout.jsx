@@ -82,7 +82,7 @@ const MAbout = React.forwardRef((props, ref) => {
             </div>
             <div className='w-full p-5'>
             <div className='text-green-400 text-2xl font-bold text-center mb-2' id='gheading'>WHO I AM?</div>
-                <div className='bg-gray-800 rounded-lg p-5 text-base flex-col justify-center mt-5' id='bd'>
+                <div className='bg-gray-800 rounded-lg p-5 text-base flex-col justify-center mt-5 text-justify' id='bd'>
                 My name is UDATA ADITYA.
                 I am a passionate and enthusiastic programmer dedicated to honing my skills in software development. As a quick learner with a self-driven attitude, I thrive on exploring new technologies and tackling complex problems. I have a strong interest in all aspects of web application development, and I am committed to making the web more accessible and innovative. My core expertise lies in JavaScript, Java which I leverage to create dynamic and efficient applications. I am actively seeking job opportunities that align with my skills and interests.
                 </div>

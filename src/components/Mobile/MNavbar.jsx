@@ -61,7 +61,7 @@ function MNavbar({ scrollToHome, scrollToAbout, scrollToEducation, scrollToProje
                     <div className="ml-[80%] h-10 w-10 flex justify-center mt-1 z-10" >
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M19 5L4.99998 19M5.00001 5L19 19" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                     </div>
-                    <div className="w-full bg-white border"></div>
+                    <div className="w-full bg-white border mt-[10px]"></div>
                     <div className="flex flex-col text-lg" id="list">
                         <div className="px-5 cursor-pointer text-2xl mt-2 hover:text-green-400" onClick={scrollToHome}>Home</div>
                         <div className="px-5 cursor-pointer text-2xl mt-2 hover:text-green-400" onClick={scrollToAbout}>About</div>
@@ -69,11 +69,12 @@ function MNavbar({ scrollToHome, scrollToAbout, scrollToEducation, scrollToProje
                         <div className="px-5 cursor-pointer text-2xl mt-2 hover:text-green-400 " onClick={scrollToEducation}>Education</div>
                         <div className="px-5 cursor-pointer text-2xl mt-2 hover:text-green-400 " onClick={scrollToProjects}>Projects</div>
                         <div className="px-5 cursor-pointer text-2xl mt-2 hover:text-green-400 " onClick={scrollToContacts}>Contact</div>
-                        </div>
+                    </div>
                 </div>
 
             </div>
-            {click ? null : <div className="border-2 border-gray-900 border-b-white pt-2 " id="border"></div>}
+            {/* {click ? null : <div className="border-2 border-gray-900 border-b-white pt-2 " id="border"></div>} */}
+            <div className="border-2 border-gray-900 border-b-white pt-2 " id="border"></div>
         </div>
     )
 }
